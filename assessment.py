@@ -22,7 +22,7 @@ def full_name(first, last):
     >>> full_name("Kristine", "Saryan")
     'Kristine Saryan'
     """
-
+    #I have a questions about why I can't concatenate here
     return "{} {}".format(first, last)
 
 def greeting(town, first, last):
