@@ -5,6 +5,23 @@ Please read the the instructions first (separate file). Your solutions should
 go below this docstring.
 
 """
+def my_hometown(town):
+    """Returns true if town is Sunland, otherwise false"""
+    return town == "Sunland"
+
+def full_name(first, last):
+    "Returns first and last name as one string"
+    return "{} {}".format(first, last)
+
+def greeting(town, first, last):
+    "Composes custom greeting based on hometown"
+    f_name = full_name(first, last)
+    if my_hometown(town):
+        print  "Hi, {}, we're from the same place!".format(f_name) 
+    else:
+        print "Hi {}, I'd like to visit {}!".format(f_name, town)
+
+
 
 ###############################################################################
 
@@ -69,8 +86,7 @@ def is_berry(fruit):
     False
 
     """
-
-    pass
+    return fruit == "strawberry" or fruit == "raspberry" or fruit == "blackberry"
 
 
 def shipping_cost(fruit):
@@ -84,7 +100,10 @@ def shipping_cost(fruit):
 
     """
 
-    pass
+    if is_berry(fruit):
+        return 0
+    else:
+        return 5
 
 
 def append_to_list(lst, num):
@@ -95,11 +114,12 @@ def append_to_list(lst, num):
     [3, 5, 7, 2]
 
     """
+    new_list = lst
+    lst.append(num)
+    return new_list
 
-    pass
 
-
-def calculate_price(FILL_ME_IN):
+def calculate_price(price, state, tax = .05):
     """Calculate total price of an item, figuring in state taxes and fees.
 
     >>> calculate_price(40, "CA")
@@ -121,8 +141,36 @@ def calculate_price(FILL_ME_IN):
     135.3
 
     """
+    price_with_tax = price + (price * tax)
 
-    pass
+    if state == "CA":
+        state_fees = price_with_tax * .03
+    elif state == "PA":
+        state_fees = 2
+    elif state == "MA":
+        if price_with_tax < 100:
+            state_fees = 1
+        else:
+            state_fees = 3
+    else:
+        state_fees = 0
+
+    total_price = price + (price * tax)+ state_fees
+
+
+    return total_price
+
+# Your function will take as parameters (in this order): the base price of
+# #        the item, a two-letter state abbreviation, and the tax percentage (as a
+# #        two-digit decimal, so, for instance, 5% will be .05). If the user does not
+# #        provide a tax rate it should default to 5%.
+
+# #         and in MA, there is a Commonwealth Fund fee of $1 for
+# #        items with a base price under $100 and $3 for items $100 or more. Fees are
+# #        added *after* the tax is calculated.
+
+# #        Your function should return the total cost of the item, including tax and
+# #        fees.
 
 
 ###############################################################################
