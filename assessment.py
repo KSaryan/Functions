@@ -14,6 +14,7 @@ def my_hometown(town):
     >>> my_hometown("Portland")
     False
     """
+
     return town == "Sunland"
 
 
@@ -23,6 +24,7 @@ def full_name(first, last):
     >>> full_name("Kristine", "Saryan")
     'Kristine Saryan'
     """
+
     #I have a questions about why I can't concatenate here
     return "{} {}".format(first, last)
 
@@ -109,8 +111,8 @@ def is_berry(fruit):
 
     >>> is_berry("durian")
     False
-
     """
+
     return fruit == "strawberry" or fruit == "raspberry" or fruit == "blackberry"
 
 
@@ -122,7 +124,6 @@ def shipping_cost(fruit):
 
     >>> shipping_cost("durian")
     5
-
     """
 
     if is_berry(fruit):
@@ -137,8 +138,8 @@ def append_to_list(lst, num):
 
     >>> append_to_list([3, 5, 7], 2)
     [3, 5, 7, 2]
-
     """
+
     new_list = lst
     lst.append(num)
     return new_list
@@ -164,8 +165,8 @@ def calculate_price(price, state, tax = .05):
 
     >>> calculate_price(126, "MA")
     135.3
-
     """
+
     price_with_tax = price + (price * tax)
 
     if state == "CA":
@@ -180,7 +181,7 @@ def calculate_price(price, state, tax = .05):
     else:
         state_fees = 0
 
-    total_price = price + (price * tax)+ state_fees
+    total_price = price + (price * tax) + state_fees
 
 
     return total_price
@@ -230,7 +231,6 @@ def append_all (*items):
 
     >>> append_all(1, [1, 2, 3])
     [1, [1, 2, 3]]
-
     """
 
     complete_list = []
@@ -244,13 +244,13 @@ def mult_by_three(word):
 
     >>> mult_by_three('unicorn')
     'unicornunicornunicorn'
-
     """
-    return word*3
+
+    return word * 3
 
 
 def make_tuple (word):
-    """prints word and word multiplied by three in single tuple
+    """Prints word and word multiplied by three in single tuple
 
     >>> make_tuple("Balloonicorn")
     ('Balloonicorn', 'BalloonicornBalloonicornBalloonicorn')
@@ -259,7 +259,6 @@ def make_tuple (word):
     three_times = mult_by_three(word)
     final_tuple = (word, three_times)
     print final_tuple
-
 
 
 
