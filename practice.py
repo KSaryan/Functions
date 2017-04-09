@@ -66,22 +66,31 @@ PART TWO:
 #Part One
 def hello_world():
     """Prints 'Hello World'"""
+
     print "Hello World"
+
 
 def say_hi(name):
     """Prints 'Hi' and inputted name"""
+
     print "Hi", name
+
 
 def print_product(num1, num2):
     """Prints the product of two numbers"""
+
     print num1 * num2
+
 
 def repeat_string(your_string, n):
     """Prints given string n number of times"""
+    
     print your_string * int(n)
+
 
 def print_sign(num):
     """Prints whether given number is higher or lower than 0"""
+    
     if num == 0:
         print "Zero"
     elif num < 0:
@@ -89,33 +98,44 @@ def print_sign(num):
     else: 
         print "Higher than 0"
 
+
 def is_divisible_by_three(num):
     """Returns True if number is divisble by 3, otherwise False"""
+    
     return num % 3 == 0
+
 
 def num_spaces(sentence):
     """Returns number of spaces in given string"""
+    
     num_spaces = 0
     for char in sentence:
         if char == " ":
             num_spaces += 1
     return num_spaces
 
-def total_meal_price(price, tip=.15):
+
+def total_meal_price(price, tip = .15):
     """Calculates and returns price of meal based on given price and tip
 
-    If no tip given, default is 15%"""
+    If no tip given, default is 15%
+    """
+
     return price + price * tip
+
 
 def sign_and_parity(num):
     """Returnds list containing sign and parity of given num"""
+
     num_info = ["Positive", "Odd"]
     if num < 0:
         num_info [0] = "Negative"
-    if num%2 == 0:
+    if num % 2 == 0:
         num_info[1] = "Even"
     return num_info
 
+
+#Calling function, assigning to variables, and printing
 s_and_p = sign_and_parity(-5)
 sign = s_and_p[0]
 parity = s_and_p[1]
@@ -124,14 +144,17 @@ print parity
 
 
 #Part Two
-def full_title(name, job= "Engineer"):
+def full_title(name, job = "Engineer"):
     """Returns name and job as one string
 
-    If no job givem, Engineer is default"""
+    If no job given, Engineer is default"""
+
     return "{} {}".format(job, name)
+
 
 def write_letter(recipient_name, recepient_title, sender_name):
     """Composes letter from sender to recipient"""
+
     recipient_full_title = full_title(recipient_name, recepient_title)
     print "Dear {}, I think you are amazing! Sincerely, {}".format(recipient_full_title, sender_name)
 
