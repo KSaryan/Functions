@@ -25,15 +25,15 @@ def full_name(first, last):
     'Kristine Saryan'
     """
 
-    #I have a questions about why I can't concatenate here
+    # I have a questions about why I can't concatenate here
     return "{} {}".format(first, last)
 
 
 def greeting(town, first, last):
     """Composes custom greeting based on hometown
 
-    #I tried to write some tests for this function, but had some trouble with escape characters
-    #I tested the function in other ways, but would like help on how to fix this
+    # I tried to write some tests for this function, but had some trouble with escape characters
+    # I tested the function in other ways, but would like help on how to fix this
     # >>> greeting ("Portland", "Bill", "Thanhouser")
     # 'Hi Bill Thanhouser, I\'d like to visit Portland!'
 
@@ -167,8 +167,11 @@ def calculate_price(price, state, tax = .05):
     135.3
     """
 
+    # calculating price with tax only
+    # need this value in next section
     price_with_tax = price + (price * tax)
 
+    # calculating state fees
     if state == "CA":
         state_fees = price_with_tax * .03
     elif state == "PA":
@@ -181,12 +184,12 @@ def calculate_price(price, state, tax = .05):
     else:
         state_fees = 0
 
+    # calculating total price with fees and taxes
     total_price = price + (price * tax) + state_fees
-
 
     return total_price
 
-#Part three is below
+# Part three is below
 
 ###############################################################################
 

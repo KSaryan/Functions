@@ -63,7 +63,8 @@ PART TWO:
     Dear Hacker Jane Hacks, I think you are amazing! Sincerely, Balloonicorn
 
 """
-#Part One
+
+# Part One
 def hello_world():
     """Prints 'Hello World'"""
 
@@ -135,7 +136,8 @@ def sign_and_parity(num):
     return num_info
 
 
-#Calling function, assigning to variables, and printing
+# Calling function, assigning to variables, and printing
+# Question 9, part 2
 s_and_p = sign_and_parity(-5)
 sign = s_and_p[0]
 parity = s_and_p[1]
@@ -143,7 +145,7 @@ print sign
 print parity
 
 
-#Part Two
+# Part Two
 def full_title(name, job = "Engineer"):
     """Returns name and job as one string
 
