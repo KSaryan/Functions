@@ -16,6 +16,7 @@ def my_hometown(town):
     """
     return town == "Sunland"
 
+
 def full_name(first, last):
     """Returns first and last name as one string
 
@@ -24,6 +25,7 @@ def full_name(first, last):
     """
     #I have a questions about why I can't concatenate here
     return "{} {}".format(first, last)
+
 
 def greeting(town, first, last):
     """Composes custom greeting based on hometown
@@ -183,6 +185,7 @@ def calculate_price(price, state, tax = .05):
 
     return total_price
 
+#Part three is below
 
 ###############################################################################
 
@@ -210,6 +213,55 @@ def calculate_price(price, state, tax = .05):
 
 
 ###############################################################################
+def append_all (*items):
+    """Takes and number of arguments and appends to list, returns list
+
+    >>> append_all(1, 2, 3)
+    [1, 2, 3]
+
+    >>> append_all(1, 'hello', '5', 5, 'donut')
+    [1, 'hello', '5', 5, 'donut']
+
+    >>> append_all(1)
+    [1]
+
+    >>> append_all()
+    []
+
+    >>> append_all(1, [1, 2, 3])
+    [1, [1, 2, 3]]
+
+    """
+
+    complete_list = []
+    for item in items:
+        complete_list.append(item)
+    return complete_list
+
+
+def mult_by_three(word):
+    """Returns word multiplied by three in single string
+
+    >>> mult_by_three('unicorn')
+    'unicornunicornunicorn'
+
+    """
+    return word*3
+
+
+def make_tuple (word):
+    """prints word and word multiplied by three in single tuple
+
+    >>> make_tuple("Balloonicorn")
+    ('Balloonicorn', 'BalloonicornBalloonicornBalloonicorn')
+    """
+
+    three_times = mult_by_three(word)
+    final_tuple = (word, three_times)
+    print final_tuple
+
+
+
 
 # END OF ASSESSMENT: You can ignore everything below.
 
