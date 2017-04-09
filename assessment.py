@@ -14,7 +14,7 @@ def my_hometown(town):
     >>> my_hometown("Portland")
     False
     """
-
+    
     return town == "Sunland"
 
 
@@ -44,7 +44,7 @@ def greeting(town, first, last):
 
     f_name = full_name(first, last)
     if my_hometown(town):
-        print  "Hi {}, we're from the same place!".format(f_name) 
+        print "Hi {}, we're from the same place!".format(f_name) 
     else:
         print "Hi {}, I'd like to visit {}!".format(f_name, town)
 
