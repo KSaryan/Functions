@@ -6,18 +6,41 @@ go below this docstring.
 
 """
 def my_hometown(town):
-    """Returns true if town is Sunland, otherwise false"""
+    """Returns True if town is Sunland, otherwise False
+
+    >>> my_hometown("Sunland")
+    True
+
+    >>> my_hometown("Portland")
+    False
+    """
     return town == "Sunland"
 
 def full_name(first, last):
-    "Returns first and last name as one string"
+    """Returns first and last name as one string
+
+    >>> full_name("Kristine", "Saryan")
+    'Kristine Saryan'
+    """
+
     return "{} {}".format(first, last)
 
 def greeting(town, first, last):
-    "Composes custom greeting based on hometown"
+    """Composes custom greeting based on hometown
+
+    #I tried to write some tests for this function, but had some trouble with escape characters
+    #I tested the function in other ways, but would like help on how to fix this
+    # >>> greeting ("Portland", "Bill", "Thanhouser")
+    # 'Hi Bill Thanhouser, I\'d like to visit Portland!'
+
+    # >>>greeting ("Sunland", "Kristine", "Saryan")
+    # "Hi Kristine Saryan, we're from the same place!"
+    # 
+    """
+
     f_name = full_name(first, last)
     if my_hometown(town):
-        print  "Hi, {}, we're from the same place!".format(f_name) 
+        print  "Hi {}, we're from the same place!".format(f_name) 
     else:
         print "Hi {}, I'd like to visit {}!".format(f_name, town)
 
@@ -159,18 +182,6 @@ def calculate_price(price, state, tax = .05):
 
 
     return total_price
-
-# Your function will take as parameters (in this order): the base price of
-# #        the item, a two-letter state abbreviation, and the tax percentage (as a
-# #        two-digit decimal, so, for instance, 5% will be .05). If the user does not
-# #        provide a tax rate it should default to 5%.
-
-# #         and in MA, there is a Commonwealth Fund fee of $1 for
-# #        items with a base price under $100 and $3 for items $100 or more. Fees are
-# #        added *after* the tax is calculated.
-
-# #        Your function should return the total cost of the item, including tax and
-# #        fees.
 
 
 ###############################################################################
